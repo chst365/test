@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function convert(s, numRows){
+            var arr = []
+            var flag 
+            for(var i = 0;i<numRows;i++){
+                arr[i]=[]
+            }
+            for(var i = 0;i<=(numRows-1)*2;i++){ // 组
+                
+                if(i%2){ // 反
+                    for(var j = numRows-2,q=0;j>0;j--){
+                    arr[j].push(s[i*(numRows-1)*2+numRows+q])
+                        q++
+                    }
+                }else{ // 正
+                for(var j = 0;j<numRows;j++){ //i=1,2,3
+                    
+                    if(i){
+                        arr[j].push(s[i*(numRows-1)*2+j])
+                    }else{
+                        console.log(arr[j])
+                        arr[j].push(s[j])
+                    }    //j=0,1,2,3
+                }
+                }
+
+            }
+            let str = []
+            for(var i in arr){
+                str = str.concat(arr[i])
+            }
+            console.log(arr)
+        }
+        convert("LDREOEIIECIHNTSG",4)
+        //o2L(yf-q,&qk
+    </script>
+</body>
+</html>
