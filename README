@@ -22,7 +22,8 @@ yarn run test
 
 ### Lints and fixes files
 ```
-yarn run lint 1
+yarn run lint 1 2 3
+
 ```
 
 ### Customize configuration
